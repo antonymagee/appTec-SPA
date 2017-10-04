@@ -1,8 +1,18 @@
-<div class="title-bar">
+
+<div *ngIf="!screenService.isLarge()" class="title-bar-small">
+  <span class="glyphicon glyphicon-menu-hamburger"></span>
+  <div class="small-image-holder">
+      <img class="small-image" src="assets/logo.png">
+  </div>
+  <span class="glyphicon glyphicon-option-vertical"></span>
+</div>
+
+
+<div *ngIf="screenService.isLarge()" class="title-bar">
   <img src="../assets/logo.png" alt="apptec Logo">
-  
+
     <fw-top-bar class="menu-area">
     </fw-top-bar>
     <!--menu -->
-  
+
 </div>
