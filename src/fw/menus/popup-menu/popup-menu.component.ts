@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { MenuService, MenuItem } from '../../services/menu.service';
+
+import { MenuItem, MenuService } from '../../services/menu.service';
 
 @Component({
   selector: 'fw-popup-menu',
@@ -8,7 +9,7 @@ import { MenuService, MenuItem } from '../../services/menu.service';
 })
 export class PopupMenuComponent implements OnInit {
 
-  @Input()  menu: Array<MenuItem>;
+  @Input() menu: Array<MenuItem>;
 
   constructor(private menuService: MenuService) { }
 

@@ -8,7 +8,7 @@ export class ScreenLarge implements OnDestroy {
   private hasView = false;
   private screenSubscription: Subscription;
 
-  constructor(private viewContainer: ViewContainerRef,
+  constructor(private viewContainer: ViewContainerRef, 
                 private template: TemplateRef<Object>,
                 private screenService: ScreenService) {
 
@@ -20,7 +20,7 @@ export class ScreenLarge implements OnDestroy {
   set screenLarge(condition) {
     // ignore the passed condition and set it based on screen size
     condition = this.screenService.screenWidth >= this.screenService.largeBreakpoint;
-
+    
     if (condition && !this.hasView) {
       this.hasView = true;
       this.viewContainer.createEmbeddedView(this.template);
@@ -30,10 +30,10 @@ export class ScreenLarge implements OnDestroy {
     }
   }
 
-ngOnDestroy(){
-  this.screenSubscription.unsubscribe();
-}
-
+  ngOnDestroy() {
+    this.screenSubscription.unsubscribe();
+  }
+  
   onResize() {
     // trigger the setter
     this.screenLarge = false;

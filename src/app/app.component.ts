@@ -10,7 +10,7 @@ import { initialMenuItems } from './app.menu';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
+  
   constructor (private frameworkConfigService: FrameworkConfigService,
                private menuService: MenuService) {
 

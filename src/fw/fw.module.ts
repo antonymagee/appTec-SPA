@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+
 import { FrameworkBodyComponent } from './framework-body/framework-body.component';
 import { ContentComponent } from './content/content.component';
 import { TitleBarComponent } from './title-bar/title-bar.component';
@@ -12,7 +14,6 @@ import { ScreenBelowLarge } from './directives/screen-below-large.directive';
 import { MenuService } from './services/menu.service';
 import { MenuComponent } from './menus/menu/menu.component';
 import { MenuItemComponent } from './menus/menu-item/menu-item.component';
-import { RouterModule } from '@angular/router';
 import { PopupMenuComponent } from './menus/popup-menu/popup-menu.component';
 
 @NgModule({
@@ -38,9 +39,7 @@ import { PopupMenuComponent } from './menus/popup-menu/popup-menu.component';
     MenuService
   ],
   exports: [
-    FrameworkBodyComponent,
-    ContentComponent,
-    TitleBarComponent
+    FrameworkBodyComponent
   ]
 })
 export class FwModule { }

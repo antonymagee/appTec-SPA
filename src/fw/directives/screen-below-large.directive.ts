@@ -20,7 +20,7 @@ export class ScreenBelowLarge implements OnDestroy {
   set screenBelowLarge(condition) {
     // ignore the passed condition and set it based on screen size
     condition = this.screenService.screenWidth < this.screenService.largeBreakpoint;
-
+    
     if (condition && !this.hasView) {
       this.hasView = true;
       this.viewContainer.createEmbeddedView(this.template);

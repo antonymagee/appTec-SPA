@@ -1,6 +1,6 @@
 :host {
     display: flex;
-    background-color: #f0fff0;
+    background-color: #f0fff0; 
     flex-grow: 1;
 }
 
