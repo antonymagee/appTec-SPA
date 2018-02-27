@@ -13,7 +13,7 @@ gulp.task('clean', function (cb) {
 /**
  * Copy all resources that are not TypeScript files into build directory.
  */
-gulp.task("resources", ["server", "app", "assets"], function () {
+gulp.task("resources", ["server", "app", "assets","fw", "styles"], function () {
     console.log("Building resources...");
 });
 /* copy the app core files to the build folder */
@@ -21,9 +21,16 @@ gulp.task("app", ['index'], function(){
     return gulp.src(["src/app/**", "!src/app/**/*.ts"])
         .pipe(gulp.dest("build/app"));
 });
+
+/* copy the framework folder to the build folder*/
+gulp.task("fw", function(){
+    return gulp.src(["src/fw/**", "!src/fw/**/*.ts"])
+        .pipe(gulp.dest("build/fw"));
+});
+
 /* get the index file to the root of the build */
 gulp.task("index", function(){
-    return gulp.src(["index.html"])
+    return gulp.src(["src/index.html"])
         .pipe(gulp.dest("build"));
 });
 /* copy node server to build folder */
@@ -32,8 +39,13 @@ gulp.task("server", function () {
         .pipe(gulp.dest("build"));
 });
 /* styles and other assets */
+gulp.task("styles", function(){
+    return gulp.src(["src/styles.css"])
+        .pipe(gulp.dest("build"));
+});
+
 gulp.task("assets", function(){
-    return gulp.src(["styles.css"])
+    return gulp.src(["src/assets/**"])
         .pipe(gulp.dest("build/assets"));
 });
 /**

@@ -26,7 +26,7 @@
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
     "express": "^4.16.2",
-    "rxjs": "^5.0.1",
+    "rxjs": "5.5.6",
     "ts-helpers": "^1.1.1",
     "zone.js": "^0.7.2"
   },
@@ -37,6 +37,7 @@
     "@types/node": "^6.0.42",
     "codelyzer": "~2.0.0-beta.1",
     "gulp": "^3.9.1",
+    "gulp-sourcemaps": "2.6.4",
     "jasmine-core": "2.5.2",
     "jasmine-spec-reporter": "2.5.0",
     "karma": "1.2.0",
